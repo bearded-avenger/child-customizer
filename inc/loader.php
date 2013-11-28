@@ -1,5 +1,12 @@
 <?php
 
+/**
+  	* Checks for a template file in the plugin, and if there is will use that intead of child theme template
+  	*
+  	* @author  Nick Haskins <email@nickhaskins.com>
+  	* @since 1.0
+*/
+
 class baChildCustomizerClass {
 
 	public function __construct(){
