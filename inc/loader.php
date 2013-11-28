@@ -16,12 +16,16 @@ class baChildCustomizerClass {
 
 	public function template_chooser($template) {
 
-		if( is_home() ) {
+		if ( is_home() ) {
 			return $this->get_template_hierarchy('index');
 		}
 
 	    if ( is_single() ) {
 	    	return $this->get_template_hierarchy('single');
+	    }
+
+	    if (is_archive()) {
+	    	return $this->get_template_hierarchy('archive');
 	    }
 
 	}
@@ -33,8 +37,8 @@ class baChildCustomizerClass {
 	    $template      = $template_slug . '.php';
 
 	    // Check if a custom template exists in the theme folder, if not, load the plugin template file
-	    if(file_exists( BA_CC_BASE_DIR. '/templatesgohere/' . $template)) {
-			$file = BA_CC_BASE_DIR. '/templatesgohere/' . $template;
+	    if (file_exists( BA_CC_BASE_DIR. '/templatesgohere/'.$template)) {
+			$file = BA_CC_BASE_DIR. '/templatesgohere/'.$template;
 	    } else {
 	    	$file = locate_template($template);
 	    }
