@@ -11,7 +11,7 @@ class baChildCustomizerClass {
 
 	public function __construct(){
 
-		add_filter( 'template_include', array($this,'template_chooser'),99);
+		add_filter( 'template_include', array($this,'template_chooser'));
 	}
 
 	public function template_chooser($template) {
