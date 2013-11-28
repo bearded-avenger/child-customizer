@@ -3,8 +3,8 @@
 Plugin Name: Child Customizer
 Plugin URI: http://www.pagelines.com/
 Description: Allows theme authors to override child theme templates
-Version: 0.1
-Author: NIck Haskins
+Version: 1.0
+Author: Nick Haskins
 Author URI: http://nickhaskins.co
 
 STOP AND READ!!!!!!!!
