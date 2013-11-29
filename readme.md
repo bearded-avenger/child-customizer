@@ -27,7 +27,13 @@ Copy any template from the child theme into the \'templatesgohere\' directory.
 ### How can I hook into a child theme with actions?   
 Put all your hooks and filters for child theme into the \'hooksgohere.php\' file  
 
+### How can I override Child Theme CSS?   
+If you are using Soren, use the Custom CSS box in Appearence menu in Wordpress admin. If not, just create a style.css file in the root of the plugin, and it will then be automatically loaded for you.    
+
 == Changelog ==  
+
+= 1.1 =  
+* Load CSS file if one is present  
 
 = 1.0 =  
 * Initial release.  

@@ -12,6 +12,7 @@ class baChildCustomizerClass {
 	public function __construct(){
 
 		add_filter( 'template_include', array($this,'template_chooser'));
+		add_action( 'wp_enqueue_scripts', array($this,'style'));
 	}
 
 	public function template_chooser($template) {
@@ -44,6 +45,12 @@ class baChildCustomizerClass {
 	    }
 
 	    return apply_filters( 'ba_cc_template_'.$template, $file);
+	}
+
+	public function style(){
+		if (file_exists( BA_CC_BASE_DIR. '/style.css')) {
+			wp_enqueue_style('cc-user-styles', BA_CC_BASE_URL.'/style.css', true);
+		}
 	}
 }
 new baChildCustomizerClass;
