@@ -29,6 +29,21 @@ class baChildCustomizerClass {
 	    	return $this->get_template_hierarchy('archive');
 	    }
 
+	    if (is_author()) {
+	    	return $this->get_template_hierarchy('author');
+	    }
+
+	    if (is_page()) {
+	    	return $this->get_template_hierarchy('page');
+	    }
+
+	    if (is_search()) {
+	    	return $this->get_template_hierarchy('search');
+	    }
+
+	    if (is_404()) {
+	    	return $this->get_template_hierarchy('404');
+	    }
 	}
 
 	public function get_template_hierarchy( $template ) {

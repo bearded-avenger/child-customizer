@@ -1,10 +1,10 @@
 === Child Customizer ===  
-Contributors: bearded-avenger  
+Contributors: nphaskins  
 Tags: child theme  
 Donate link: http://nickhaskins.co  
 Requires at least: 3.0.1  
 Tested up to: 3.8  
-Stable tag: 4.5  
+Stable tag: trunk
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html    
 
@@ -14,7 +14,7 @@ Plugin is to be used with Wordpress child themes only. The plugin checks to see 
 
 Also provides a \'hooksgohere.php\' file so theme authors can hook into child themes.  
 
-Mainly developed for use with my own framework but can probably used with any Wordpress child theme.  
+Mainly developed for use with my own framework but can be used with any Wordpress child theme.  
 
 ## Installation   
 1. Upload \"child-customizer\" to the \"/wp-content/plugins/\" directory.  
@@ -28,7 +28,7 @@ Copy any template from the child theme into the \'templatesgohere\' directory.
 Put all your hooks and filters for child theme into the \'hooksgohere.php\' file  
 
 ### How can I override Child Theme CSS?   
-If you are using Soren, use the Custom CSS box in Appearence menu in Wordpress admin. If not, just create a style.css file in the root of the plugin, and it will then be automatically loaded for you.    
+Create a style.css file in the root of the plugin, and it will then be automatically loaded for you.    
 
 == Changelog ==  
 
