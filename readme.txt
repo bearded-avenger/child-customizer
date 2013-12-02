@@ -12,6 +12,8 @@ Safely override child theme templates.
 
 Plugin is to be used with Wordpress child themes only. The plugin checks to see if any theme template files are in the 'templatesgohere' directory, and if there are, it will use that template instead of the child themes template.  
 
+Provides support to override index, single, archive, author, page, search, and 404.
+
 Also provides a 'hooksgohere.php' file so theme authors can hook into child themes.  
 
 Want to load a style.css file? Easy, just create one inside the plugin, and it will automatically load it.
