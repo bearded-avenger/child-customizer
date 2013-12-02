@@ -1,7 +1,7 @@
 <?php
 
 /**
-  	* Checks for a template file in the plugin, and if there is will use that intead of child theme template
+  	* Checks for a template file in the wp-content/cc-templates directory, and if there is will use that intead of child theme template
   	*
   	* @author  Nick Haskins <email@nickhaskins.com>
   	* @since 1.0
@@ -53,8 +53,8 @@ class baChildCustomizerClass {
 	    $template      = $template_slug . '.php';
 
 	    // Check if a custom template exists in the theme folder, if not, load the plugin template file
-	    if (file_exists( BA_CC_BASE_DIR. '/templatesgohere/'.$template)) {
-			$file = BA_CC_BASE_DIR. '/templatesgohere/'.$template;
+	    if (file_exists( WP_CONTENT_DIR. '/cc-templates/'.$template)) {
+			$file = WP_CONTENT_DIR. '/cc-templates/'.$template;
 	    } else {
 	    	$file = locate_template($template);
 	    }
@@ -63,8 +63,8 @@ class baChildCustomizerClass {
 	}
 
 	public function style(){
-		if (file_exists( BA_CC_BASE_DIR. '/style.css')) {
-			wp_enqueue_style('cc-user-styles', BA_CC_BASE_URL.'/style.css', true);
+		if (file_exists( WP_CONTENT_DIR. '/cc-templates/style.css')) {
+			wp_enqueue_style('cc-user-styles', WP_CONTENT_DIR.'/cc-templates/style.css', true);
 		}
 	}
 }
