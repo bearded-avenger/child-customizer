@@ -10,11 +10,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Safely override a child theme template.  
 
-Plugin is to be used with Wordpress child themes only. The plugin checks to see if any theme template files are in the \'templatesgohere\' directory, and if there are, it will use that template instead of the child themes template.  
+Plugin is to be used with Wordpress child themes only. The plugin checks to see if any theme template files are in the \'wp-content/cc-templates\' directory, and if there are, it will use that template instead of the child themes template.  
 
 Provides support to override index, single, archive, author, page, search, and 404.  
-
-Also provides a \'hooksgohere.php\' file so theme authors can hook into child themes.  
 
 Mainly developed for use with my own framework but can be used with any Wordpress child theme.  
 
@@ -24,15 +22,16 @@ Mainly developed for use with my own framework but can be used with any Wordpres
 
 ## Frequently Asked Questions  
 ### How do I override a child template?   
-Copy any template from the child theme into the \'templatesgohere\' directory.  
+Copy any template from the child theme into the \'wp-content/cc-temlates\' directory.  
 
-### How can I hook into a child theme with actions?   
-Put all your hooks and filters for child theme into the \'hooksgohere.php\' file  
 
 ### How can I override Child Theme CSS?   
-Create a style.css file in the root of the plugin, and it will then be automatically loaded for you.    
+Create a style.css file in \'wp-content/cc-temlates\', and it will then be automatically loaded for you.    
 
 == Changelog ==  
+
+= 1.2 ==  
+* Moved templates dir to wp-content so not overriden if plugin is ever updated  
 
 = 1.1 =  
 * Load CSS file if one is present  
